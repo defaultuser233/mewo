@@ -47,7 +47,27 @@
             font-size: 2rem;
             letter-spacing: 2px;
             user-select: none;
+            /* 呼吸灯特效 */
+            animation: breathe 2.5s ease-in-out infinite;
         }
+        /* 呼吸灯关键帧 */
+        @keyframes breathe {
+            0%, 100% {
+                text-shadow:
+                    0 0 2px var(--accent),
+                    0 0 5px var(--accent),
+                    0 0 10px var(--accent);
+                opacity: 0.85;
+            }
+            50% {
+                text-shadow:
+                    0 0 5px var(--accent),
+                    0 0 15px var(--accent),
+                    0 0 30px var(--accent);
+                opacity: 1;
+            }
+        }
+
         .input-group {
             display: flex;
             gap: 10px;
